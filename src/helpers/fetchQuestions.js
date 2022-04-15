@@ -81,7 +81,11 @@ export function useFetch(options) {
 
   fetch(url)
     .then(res => res.json())
-    .then(json => data.value = cleanData(json.results))
+    .then(json => {
+      // response error
+      if (json.response_code) throw Error 
+      else data.value = cleanData(json.results)
+    })
     .catch(err => error.value = err)
 
   return { data, error }

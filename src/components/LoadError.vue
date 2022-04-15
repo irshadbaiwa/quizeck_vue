@@ -15,7 +15,7 @@ function goHome() {
       Error!
     </h1>
     <p class="m-2 text-lg">
-      Unable to fetch questions at the moment, 
+      An error occured while to fetching questions, 
       please check your internet connection and try again.
     </p>
     <button @click="goHome" class="py-2 px-4 mt-4 bg-sky-600 hover:bg-sky-700 text-white rounded-md">
